@@ -120,7 +120,7 @@ export function ContactsTab() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-          className="w-12 h-12 border-4 border-[#4A90E2] border-t-transparent rounded-full"
+          className="w-12 h-12 border-4 border-[#8B5CF6] border-t-transparent rounded-full"
         />
       </div>
     );
@@ -207,7 +207,7 @@ export function ContactsTab() {
               <div className="bg-card rounded-2xl border border-border/50 p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#8B5CF6] to-[#1E293B] rounded-full flex items-center justify-center text-white font-semibold">
                       {selectedContact.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
@@ -216,7 +216,7 @@ export function ContactsTab() {
                       </h3>
                       <a
                         href={`mailto:${selectedContact.email}`}
-                        className="text-sm text-[#4A90E2] hover:underline"
+                        className="text-sm text-[#8B5CF6] hover:underline"
                       >
                         {selectedContact.email}
                       </a>
@@ -278,7 +278,7 @@ export function ContactsTab() {
                   <div className="pt-4 border-t border-border/50 flex gap-3">
                     <Button
                       asChild
-                      className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white gap-2"
+                      className="bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] hover:from-blue-600 hover:to-blue-700 text-white gap-2"
                     >
                       <a href={`mailto:${selectedContact.email}`}>
                         <Mail className="w-4 h-4" />

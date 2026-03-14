@@ -135,7 +135,7 @@ export function Contact() {
                         type="text"
                         placeholder="John Doe"
                         required
-                        className="bg-muted border-border/50 focus:border-[#4A90E2] focus:ring-[#4A90E2] transition-all"
+                        className="bg-muted border-border/50 focus:border-[#8B5CF6] focus:ring-[#8B5CF6] transition-all"
                       />
                     </div>
 
@@ -153,7 +153,7 @@ export function Contact() {
                         type="email"
                         placeholder="john@example.com"
                         required
-                        className="bg-muted border-border/50 focus:border-[#4A90E2] focus:ring-[#4A90E2] transition-all"
+                        className="bg-muted border-border/50 focus:border-[#8B5CF6] focus:ring-[#8B5CF6] transition-all"
                       />
                     </div>
 
@@ -171,7 +171,7 @@ export function Contact() {
                         placeholder="Tell me about your project..."
                         rows={6}
                         required
-                        className="bg-muted border-border/50 focus:border-[#4A90E2] focus:ring-[#4A90E2] resize-none transition-all"
+                        className="bg-muted border-border/50 focus:border-[#8B5CF6] focus:ring-[#8B5CF6] resize-none transition-all"
                       />
                     </div>
 
@@ -180,7 +180,7 @@ export function Contact() {
                       type="submit"
                       disabled={status === 'loading'}
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] hover:from-blue-600 hover:to-blue-700 text-white gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {status === 'loading' ? (
                         <>
@@ -253,7 +253,7 @@ export function Contact() {
                       }}
                     >
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#8B5CF6] to-[#1E293B] rounded-xl flex items-center justify-center text-white flex-shrink-0">
                           <Icon className="w-6 h-6" />
                         </div>
                         <div className="flex-1">
@@ -261,7 +261,7 @@ export function Contact() {
                           {info.href ? (
                             <a
                               href={info.href}
-                              className="text-muted-foreground hover:text-[#4A90E2] transition-colors"
+                              className="text-muted-foreground hover:text-[#8B5CF6] transition-colors"
                             >
                               {info.value}
                             </a>
@@ -336,7 +336,7 @@ export function Contact() {
                       }
                     }
                   }}
-                  className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 text-white"
+                  className="bg-gradient-to-br from-[#0EA5E9] to-[#1E293B] rounded-2xl p-6 text-white"
                   style={{
                     boxShadow: '0 8px 30px rgba(34, 197, 94, 0.3)',
                   }}

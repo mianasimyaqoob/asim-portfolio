@@ -125,7 +125,7 @@ export function Projects() {
                   }}
                   onClick={() => setSelectedCategory(category.id as any)}
                   className={`px-6 py-3 rounded-full font-medium transition-all ${selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/30'
+                    ? 'bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] text-white shadow-lg shadow-blue-500/30'
                     : 'bg-card text-muted-foreground border border-border/50/50 hover:border-blue-300 hover:shadow-md'
                     }`}
                 >
@@ -273,7 +273,7 @@ export function Projects() {
                         <DialogTitle className="text-4xl font-bold text-foreground mb-2">
                           {selectedProject.title}
                         </DialogTitle>
-                        <p className="text-xl text-[#4A90E2] font-medium mb-4">
+                        <p className="text-xl text-[#8B5CF6] font-medium mb-4">
                           {selectedProject.subtitle || selectedProject.tagline}
                         </p>
                       </div>
@@ -326,7 +326,7 @@ export function Projects() {
                           />
                         </motion.div>
                       </AnimatePresence>
-                      <div className={`absolute inset-0 bg-gradient-to-br ${selectedProject.color || 'from-blue-500 to-blue-600'} opacity-[0.03] mix-blend-multiply pointer-events-none`} />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} opacity-[0.03] mix-blend-multiply pointer-events-none`} />
                       
                       {/* Navigation Arrows */}
                       {allSelectedProjectImages.length > 1 && (
@@ -367,7 +367,7 @@ export function Projects() {
                     {selectedProject.videoUrl && (
                       <div className="mt-8">
                         <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-                          <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-blue-500 to-blue-600'} rounded-full`} />
+                          <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} rounded-full`} />
                           <Play className="w-5 h-5" /> Video Demo
                         </h3>
                         <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl bg-black border border-gray-800">
@@ -405,7 +405,7 @@ export function Projects() {
                     {/* Context / Problem */}
                     <div>
                       <h3 className="text-2xl font-bold text-foreground mb-3 flex items-center gap-3">
-                        <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-blue-500 to-blue-600'} rounded-full`} />
+                        <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} rounded-full`} />
                         Context & Problem
                       </h3>
                       <p className="text-muted-foreground leading-relaxed">
@@ -416,13 +416,13 @@ export function Projects() {
                     {/* Solution & Features */}
                     <div>
                       <h3 className="text-2xl font-bold text-foreground mb-3 flex items-center gap-3">
-                        <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-blue-500 to-blue-600'} rounded-full`} />
+                        <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} rounded-full`} />
                         Solution & Features
                       </h3>
                       <ul className="space-y-3">
                         {(selectedProject.solution || selectedProject.solutionFeatures || []).map((item, index) => (
                           <li key={index} className="flex items-start gap-3">
-                            <div className={`w-6 h-6 rounded-full bg-gradient-to-r ${selectedProject.color || 'from-blue-500 to-blue-600'} flex items-center justify-center text-white text-sm font-bold flex-shrink-0`}>
+                            <div className={`w-6 h-6 rounded-full bg-gradient-to-r ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} flex items-center justify-center text-white text-sm font-bold flex-shrink-0`}>
                               {index + 1}
                             </div>
                             <span className="text-muted-foreground leading-relaxed pt-0.5">{item}</span>
@@ -434,14 +434,14 @@ export function Projects() {
                     {/* Tech Stack */}
                     <div>
                       <h3 className="text-2xl font-bold text-foreground mb-3 flex items-center gap-3">
-                        <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-blue-500 to-blue-600'} rounded-full`} />
+                        <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} rounded-full`} />
                         Tech Stack
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {selectedProject.tech.map((tech) => (
                           <Badge
                             key={tech}
-                            className={`bg-gradient-to-r ${selectedProject.color || 'from-blue-500 to-blue-600'} text-white px-4 py-2 text-sm`}
+                            className={`bg-gradient-to-r ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} text-white px-4 py-2 text-sm`}
                           >
                             {tech}
                           </Badge>
@@ -452,13 +452,13 @@ export function Projects() {
                     {/* Impact / Outcome */}
                     <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100">
                       <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-                        <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-blue-500 to-blue-600'} rounded-full`} />
+                        <div className={`w-8 h-1 bg-gradient-to-r ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} rounded-full`} />
                         Impact & Outcomes
                       </h3>
                       <ul className="space-y-3">
                         {(selectedProject.impact || []).map((item, index) => (
                           <li key={index} className="flex items-start gap-3">
-                            <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${selectedProject.color || 'from-blue-500 to-blue-600'} mt-2 flex-shrink-0`} />
+                            <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${selectedProject.color || 'from-[#8B5CF6] to-[#1E293B]'} mt-2 flex-shrink-0`} />
                             <span className="text-foreground font-medium leading-relaxed">{item}</span>
                           </li>
                         ))}

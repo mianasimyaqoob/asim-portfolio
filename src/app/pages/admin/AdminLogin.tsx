@@ -95,7 +95,7 @@ export function AdminLogin() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-            className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 mx-auto"
+            className="w-16 h-16 bg-gradient-to-br from-[#8B5CF6] to-[#1E293B] rounded-2xl flex items-center justify-center text-white mb-8 mx-auto"
           >
             <Lock className="w-8 h-8" />
           </motion.div>
@@ -121,7 +121,7 @@ export function AdminLogin() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="pl-11 bg-muted border-border/50 focus:border-[#4A90E2] focus:ring-[#4A90E2]"
+                  className="pl-11 bg-muted border-border/50 focus:border-[#8B5CF6] focus:ring-[#8B5CF6]"
                 />
               </div>
             </div>
@@ -139,7 +139,7 @@ export function AdminLogin() {
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                   required
-                  className="pl-11 bg-muted border-border/50 focus:border-[#4A90E2] focus:ring-[#4A90E2]"
+                  className="pl-11 bg-muted border-border/50 focus:border-[#8B5CF6] focus:ring-[#8B5CF6]"
                 />
               </div>
             </div>
@@ -147,7 +147,7 @@ export function AdminLogin() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white"
+              className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] hover:from-blue-600 hover:to-blue-700 text-white"
               size="lg"
             >
               {isLoading ? (

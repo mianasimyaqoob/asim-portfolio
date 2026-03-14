@@ -83,7 +83,7 @@ export function FloatingSkillStack() {
           <div 
             className="w-32 h-32 rounded-3xl backdrop-blur-xl bg-card/80 border border-border/50 flex flex-col items-center justify-center gap-2 p-4"
             style={{
-              boxShadow: '0 8px 32px rgba(74, 144, 226, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
+              boxShadow: '0 8px 32px rgba(139, 92, 246, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
             }}
           >
             {/* Avatar/Icon area */}
@@ -150,7 +150,7 @@ export function FloatingSkillStack() {
                 style={{
                   boxShadow: `
                     0 4px 24px rgba(0, 0, 0, 0.08),
-                    0 0 0 1px rgba(74, 144, 226, 0.1),
+                    0 0 0 1px rgba(139, 92, 246, 0.1),
                     inset 0 1px 0 rgba(255, 255, 255, 0.9)
                   `,
                 }}

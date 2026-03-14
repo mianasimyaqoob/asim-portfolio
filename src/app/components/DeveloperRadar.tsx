@@ -8,28 +8,28 @@ export function DeveloperRadar() {
       icon: Code2,
       position: { x: -120, y: -80 },
       delay: 0,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-[#8B5CF6] to-[#1E293B]',
     },
     {
       label: 'Backend',
       icon: Server,
       position: { x: 120, y: -60 },
       delay: 0.1,
-      color: 'from-green-500 to-green-600',
+      color: 'from-[#0EA5E9] to-[#1E293B]',
     },
     {
       label: 'Mobile',
       icon: Smartphone,
       position: { x: -100, y: 60 },
       delay: 0.2,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-[#8B5CF6] to-[#0EA5E9]',
     },
     {
       label: 'Automation',
       icon: Bot,
       position: { x: 130, y: 80 },
       delay: 0.3,
-      color: 'from-orange-500 to-orange-600',
+      color: 'from-[#8B5CF6] to-[#1E293B]',
     },
     {
       label: 'APIs',
@@ -62,9 +62,9 @@ export function DeveloperRadar() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-        className="absolute w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl z-10"
+        className="absolute w-20 h-20 bg-gradient-to-br from-[#8B5CF6] to-[#1E293B] rounded-full flex items-center justify-center text-white font-bold text-2xl z-10"
         style={{
-          boxShadow: '0 10px 40px rgba(74, 144, 226, 0.4)',
+          boxShadow: '0 10px 40px rgba(139, 92, 246, 0.4)',
         }}
       >
         MS
@@ -102,7 +102,7 @@ export function DeveloperRadar() {
               }}
               className={`bg-card rounded-2xl px-5 py-3 border border-border/50/50 flex items-center gap-3 backdrop-blur-sm`}
               style={{
-                boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(74, 144, 226, 0.15)',
+                boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(139, 92, 246, 0.15)',
               }}
             >
               <div className={`w-8 h-8 bg-gradient-to-br ${skill.color} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>

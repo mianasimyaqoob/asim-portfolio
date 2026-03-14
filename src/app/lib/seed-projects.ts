@@ -17,7 +17,7 @@ export const initialProjects = [
     ],
     liveUrl: 'https://socialvibing.online',
     githubUrl: '#',
-    color: 'from-blue-500 to-blue-600',
+    color: 'from-[#8B5CF6] to-[#1E293B]',
   },
   {
     title: 'TOUR EASE',
@@ -34,7 +34,7 @@ export const initialProjects = [
     ],
     liveUrl: '#',
     githubUrl: '#',
-    color: 'from-purple-500 to-purple-600',
+    color: 'from-[#8B5CF6] to-[#0EA5E9]',
   },
   {
     title: 'SCHOLARIQ',
@@ -51,7 +51,7 @@ export const initialProjects = [
     ],
     liveUrl: '#',
     githubUrl: '#',
-    color: 'from-green-500 to-green-600',
+    color: 'from-[#0EA5E9] to-[#1E293B]',
   },
 ];
 

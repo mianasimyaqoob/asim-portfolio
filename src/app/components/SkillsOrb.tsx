@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Code2, Database, Smartphone, Globe, Zap, Cpu } from 'lucide-react';
 
 const techIcons = [
-  { Icon: Code2, color: '#4A90E2', delay: 0 },
+  { Icon: Code2, color: '#8B5CF6', delay: 0 },
   { Icon: Database, color: '#10B981', delay: 0.5 },
   { Icon: Smartphone, color: '#8B5CF6', delay: 1 },
   { Icon: Globe, color: '#F59E0B', delay: 1.5 },
@@ -26,7 +26,7 @@ export function SkillsOrb() {
         }}
         className="absolute w-32 h-32 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-600/20 backdrop-blur-lg border border-blue-300/30"
         style={{
-          boxShadow: '0 8px 32px rgba(74, 144, 226, 0.2)',
+          boxShadow: '0 8px 32px rgba(139, 92, 246, 0.2)',
         }}
       />
 

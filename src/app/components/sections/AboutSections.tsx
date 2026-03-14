@@ -3,10 +3,10 @@ import { Code2, Database, Smartphone, Bot, Award, Briefcase } from 'lucide-react
 import { fadeInUpSmall, staggerContainer, staggerItem } from '../../utils/animations';
 
 const skills = [
-  { name: 'React / Next.js', level: 'Advanced', icon: Code2, color: 'from-blue-500 to-blue-600' },
-  { name: 'Node.js / Express', level: 'Intermediate to Advanced', icon: Database, color: 'from-green-500 to-green-600' },
-  { name: 'Flutter / Dart', level: 'Advanced', icon: Smartphone, color: 'from-purple-500 to-purple-600' },
-  { name: 'Python / Automation', level: 'Advanced', icon: Bot, color: 'from-orange-500 to-orange-600' },
+  { name: 'React / Next.js', level: 'Advanced', icon: Code2, color: 'from-[#8B5CF6] to-[#1E293B]' },
+  { name: 'Node.js / Express', level: 'Intermediate to Advanced', icon: Database, color: 'from-[#0EA5E9] to-[#1E293B]' },
+  { name: 'Flutter / Dart', level: 'Advanced', icon: Smartphone, color: 'from-[#8B5CF6] to-[#0EA5E9]' },
+  { name: 'Python / Automation', level: 'Advanced', icon: Bot, color: 'from-[#8B5CF6] to-[#1E293B]' },
 ];
 
 const timeline = [
@@ -67,7 +67,7 @@ const expertise = [
       { name: 'Tailwind CSS', description: '' },
       { name: 'Motion', description: '' }
     ],
-    color: 'from-blue-500 to-blue-600',
+    color: 'from-[#8B5CF6] to-[#1E293B]',
   },
   {
     title: 'Mobile',
@@ -77,7 +77,7 @@ const expertise = [
       { name: 'React Native', description: '' },
       { name: 'Dart', description: '' }
     ],
-    color: 'from-purple-500 to-purple-600',
+    color: 'from-[#8B5CF6] to-[#0EA5E9]',
   },
   {
     title: 'Backend & Databases',
@@ -89,7 +89,7 @@ const expertise = [
       { name: 'PostgreSQL', description: '' },
       { name: 'REST APIs', description: '' }
     ],
-    color: 'from-green-500 to-green-600',
+    color: 'from-[#0EA5E9] to-[#1E293B]',
   },
   {
     title: 'Tools',
@@ -101,7 +101,7 @@ const expertise = [
       { name: 'Git & GitHub Actions', description: '' },
       { name: 'Vercel & Firebase', description: '' }
     ],
-    color: 'from-orange-500 to-orange-600',
+    color: 'from-[#8B5CF6] to-[#1E293B]',
   },
 ];
 
@@ -149,7 +149,7 @@ export function AboutSections() {
                     <div className="flex-1">
                       <div className="flex justify-between items-center mb-2">
                         <h3 className="font-semibold text-foreground">{skill.name}</h3>
-                        <span className="text-xs font-bold text-[#4A90E2] uppercase tracking-wider">{skill.level}</span>
+                        <span className="text-xs font-bold text-[#8B5CF6] uppercase tracking-wider">{skill.level}</span>
                       </div>
                     </div>
                   </div>
@@ -213,9 +213,9 @@ export function AboutSections() {
                     },
                   },
                 }}
-                className="relative pl-8 border-l-2 border-[#4A90E2]"
+                className="relative pl-8 border-l-2 border-[#8B5CF6]"
               >
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-[#4A90E2] rounded-full" />
+                <div className="absolute -left-2 top-0 w-4 h-4 bg-[#8B5CF6] rounded-full" />
                 <div
                   className="bg-card rounded-2xl p-8 border border-border/50/50"
                   style={{
@@ -223,17 +223,17 @@ export function AboutSections() {
                   }}
                 >
                   <div className="flex items-start gap-4 mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${index === 0 ? 'from-blue-500 to-blue-600' : 'from-green-500 to-green-600'} rounded-xl flex items-center justify-center text-white`}>
+                    <div className={`w-12 h-12 bg-gradient-to-br ${index === 0 ? 'from-[#8B5CF6] to-[#1E293B]' : 'from-[#0EA5E9] to-[#1E293B]'} rounded-xl flex items-center justify-center text-white`}>
                       {index === 0 ? <Award className="w-6 h-6" /> : <Briefcase className="w-6 h-6" />}
                     </div>
                     <div className="flex-1">
                       <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
                         <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
-                        <span className="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-sm font-medium">
+                        <span className="px-3 py-1 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-full text-sm font-medium">
                           {item.year}
                         </span>
                       </div>
-                      <p className="text-[#4A90E2] font-semibold mb-2">{item.organization}</p>
+                      <p className="text-[#8B5CF6] font-semibold mb-2">{item.organization}</p>
                       <p className="text-muted-foreground">{item.description}</p>
                     </div>
                   </div>

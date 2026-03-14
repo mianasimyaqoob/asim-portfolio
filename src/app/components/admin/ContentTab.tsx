@@ -67,7 +67,7 @@ export function ContentTab() {
                 <Button
                     onClick={handleSave}
                     disabled={isSaving}
-                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white gap-2 rounded-xl shadow-lg shadow-blue-500/20"
+                    className="bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] hover:from-blue-600 hover:to-blue-700 text-white gap-2 rounded-xl shadow-lg shadow-blue-500/20"
                 >
                     {isSaving ? <RefreshCcw className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                     {isSaving ? 'Saving...' : 'Save Changes'}

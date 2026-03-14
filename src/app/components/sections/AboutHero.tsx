@@ -15,7 +15,7 @@ export function AboutHero() {
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground">
               About Me
             </h1>
-            <h2 className="text-2xl lg:text-3xl text-[#4A90E2] font-semibold">
+            <h2 className="text-2xl lg:text-3xl text-[#8B5CF6] font-semibold">
               Asim Yaqoob
             </h2>
             <p className="text-xl lg:text-2xl font-medium text-muted-foreground tracking-wide">
@@ -38,9 +38,9 @@ export function AboutHero() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.96, rotate: -2 }}
               transition={{ type: 'spring', stiffness: 260, damping: 18 }}
-              className="w-80 h-80 rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white relative overflow-hidden cursor-pointer"
+              className="w-80 h-80 rounded-3xl bg-gradient-to-br from-[#8B5CF6] to-[#1E293B] flex items-center justify-center text-white relative overflow-hidden cursor-pointer"
               style={{
-                boxShadow: '0 20px 60px rgba(74, 144, 226, 0.3)',
+                boxShadow: '0 20px 60px rgba(139, 92, 246, 0.3)',
               }}
             >
               <img

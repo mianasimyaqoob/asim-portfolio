@@ -396,7 +396,7 @@ app.post("/make-server-aa72bace/contact", async (c: Context) => {
         },
         body: JSON.stringify({
           from: 'Portfolio Contact <onboarding@resend.dev>',
-          to: ['shehrozshafiq03@gmail.com'],
+          to: ['asimyaqoobmian@gmail.com'],
           reply_to: email,
           subject: `New portfolio contact from ${name}`,
           html: htmlBody,

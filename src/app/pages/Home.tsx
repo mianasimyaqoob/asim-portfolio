@@ -100,24 +100,18 @@ export function Home() {
         <section className="scroll-section min-h-screen pt-20 flex items-center relative overflow-hidden">
           {/* ANIMATION STAGE 1: Background Gradient (0-1.2s) */}
           {/* Soft diagonal gradient - top-left tinted, bottom-right brighter */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2 }}
-            className="absolute inset-0 pointer-events-none"
+          <div
+            className="absolute inset-0 pointer-events-none animate-drift opacity-60 will-change-transform"
             style={{
-              background: 'linear-gradient(135deg, rgba(74, 144, 226, 0.06) 0%, rgba(139, 92, 246, 0.04) 30%, rgba(247, 247, 247, 0) 70%)',
+              background: 'linear-gradient(135deg, rgba(88, 28, 135, 0.1) 0%, rgba(30, 41, 59, 0.05) 30%, transparent 70%)',
             }}
           />
 
           {/* Radial highlight behind name area */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.0, delay: 0.3 }}
-            className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none opacity-50"
+          <div
+            className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] pointer-events-none animate-drift-slow will-change-transform opacity-40"
             style={{
-              background: 'radial-gradient(circle, rgba(74, 144, 226, 0.08) 0%, rgba(74, 144, 226, 0) 70%)',
+              background: 'radial-gradient(circle, rgba(139, 92, 246, 0.06) 0%, transparent 70%)',
             }}
           />
 
@@ -134,18 +128,9 @@ export function Home() {
           />
 
           {/* Soft ambient orbs */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.5 }}
-            className="absolute top-20 right-20 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl pointer-events-none"
-          />
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.7 }}
-            className="absolute bottom-20 left-20 w-64 h-64 bg-purple-400/4 rounded-full blur-3xl pointer-events-none"
-          />
+          <div className="absolute top-20 right-20 w-80 h-80 bg-[#8B5CF6]/10 rounded-full blur-[80px] pointer-events-none animate-drift will-change-transform" />
+          <div className="absolute bottom-20 left-20 w-60 h-60 bg-[#0EA5E9]/10 rounded-full blur-[70px] pointer-events-none animate-drift-slow will-change-transform" 
+               style={{ animationDirection: 'alternate-reverse', animationDuration: '25s' }} />
 
           <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center relative z-10">
             {/* Left Content Column */}
@@ -153,17 +138,16 @@ export function Home() {
               <div className="space-y-5">
                 {/* ANIMATION: Availability badge (Delay: 0.6s) */}
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.5 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-card/90 backdrop-blur-sm rounded-full border border-blue-200/60 shadow-sm"
+                  animate={{ opacity: [0.8, 1, 0.8] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-card/90 backdrop-blur-sm rounded-full border border-[#8B5CF6]/20 shadow-sm"
                 >
                   <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
+                    animate={{ scale: [1, 1.4, 1], opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                    className="w-2 h-2 bg-green-500 rounded-full"
+                    className="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"
                   />
-                  <p className="text-[#4A90E2] font-semibold text-sm">
+                  <p className="text-[#8B5CF6] font-bold text-xs tracking-wider uppercase">
                     Available for new projects
                   </p>
                 </motion.div>
@@ -175,14 +159,20 @@ export function Home() {
                   transition={{ duration: 0.5, delay: 0.8 }}
                   className="space-y-3"
                 >
-                  <h1
+                  <motion.h1
+                    animate={{ opacity: [0.95, 1, 0.95] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                     className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tight leading-[0.95]"
-                    style={{ textShadow: '0 1px 2px rgba(15, 23, 42, 0.06)' }}
+                    style={{ textShadow: '0 1px 2px rgba(15, 23, 42, 0.04)' }}
                   >
                     <span className="block">Asim</span>
                     <span className="block">Yaqoob</span>
-                  </h1>
-                  <div className="h-1 w-20 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
+                  </motion.h1>
+                  <motion.div 
+                    animate={{ width: [40, 100, 40], opacity: [0.6, 1, 0.6] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                    className="h-1.5 rounded-full bg-gradient-to-r from-[#8B5CF6] via-[#FFFFFF] to-[#0EA5E9]" 
+                  />
                 </motion.div>
 
                 {/* ANIMATION STAGE 2: Subtitle fade-up (1.2s, stagger 80ms) */}
@@ -231,7 +221,7 @@ export function Home() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white gap-2 shadow-md hover:shadow-xl transition-all duration-250"
+                    className="bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] hover:opacity-90 text-white gap-2 shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all duration-300 border-none"
                   >
                     <Link to="/contact">
                       Get in Touch <ArrowRight className="w-5 h-5" />
@@ -284,7 +274,7 @@ export function Home() {
                     variant="ghost"
                     className="gap-2 text-muted-foreground hover:text-foreground hover:bg-card/80 transition-all duration-200"
                   >
-                    <a href="/images/projects/Asim-Yaqoob-Resume.pdf" download="Asim-Yaqoob-Resume.pdf">
+                    <a href="/images/projects/asimyaqoobcv.pdf" download="asimyaqoobcv.pdf">
                       <Download className="w-5 h-5" /> Resume
                     </a>
                   </Button>
@@ -324,8 +314,8 @@ export function Home() {
                     }}
                     whileHover={{
                       y: -4,
-                      backgroundColor: 'rgba(74, 144, 226, 0.12)',
-                      borderColor: 'rgba(74, 144, 226, 0.4)',
+                      backgroundColor: 'rgba(139, 92, 246, 0.12)',
+                      borderColor: 'rgba(139, 92, 246, 0.4)',
                       transition: { duration: 0.2 }
                     }}
                     className="px-4 py-2.5 bg-card/90 backdrop-blur-sm rounded-full border border-border/50/60 text-sm font-medium text-muted-foreground cursor-default transition-all duration-200"
@@ -367,7 +357,7 @@ export function Home() {
                   {['Upwork', 'Fiverr', 'Remote Clients'].map((platform) => (
                     <div
                       key={platform}
-                      className="px-4 py-1.5 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full text-xs font-semibold text-[#4A90E2] border border-blue-200/40 shadow-sm"
+                      className="px-4 py-1.5 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full text-xs font-semibold text-[#8B5CF6] border border-blue-200/40 shadow-sm"
                     >
                       {platform}
                     </div>
@@ -433,7 +423,7 @@ export function Home() {
                     <div className="space-y-1">
                       <div className="text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight">
                         {stat.number}
-                        {stat.number.match(/^\d+$/) && <span className="text-[#4A90E2] ml-0.5">+</span>}
+                        {stat.number.match(/^\d+$/) && <span className="text-[#8B5CF6] ml-0.5">+</span>}
                       </div>
                       <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
                         {stat.label}
@@ -505,7 +495,7 @@ export function Home() {
                     </div>
                     <h3 className="text-xl font-semibold text-foreground mb-1">{project.title}</h3>
                     <p className="text-xs text-muted-foreground mb-2">{project.category}</p>
-                    <p className="text-sm text-[#4A90E2] font-medium">{project.tagline}</p>
+                    <p className="text-sm text-[#8B5CF6] font-medium">{project.tagline}</p>
                   </motion.div>
                 ))}
             </motion.div>
@@ -560,13 +550,13 @@ export function Home() {
                 >
                   {/* Quote Icon */}
                   <div className="absolute top-6 right-6 w-10 h-10 bg-gradient-to-br from-blue-500/10 to-blue-600/10 rounded-full flex items-center justify-center">
-                    <Quote className="w-5 h-5 text-[#4A90E2]" />
+                    <Quote className="w-5 h-5 text-[#8B5CF6]" />
                   </div>
 
                   {/* Rating Stars */}
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: item.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-[#4A90E2] text-[#4A90E2]" />
+                      <Star key={i} className="w-4 h-4 fill-[#8B5CF6] text-[#8B5CF6]" />
                     ))}
                   </div>
 
@@ -577,7 +567,7 @@ export function Home() {
 
                   {/* Project */}
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#8B5CF6] to-[#1E293B] rounded-full flex items-center justify-center text-white font-semibold">
                       {item.title
                         .split(/[\s.]+/)
                         .filter(Boolean)
@@ -611,8 +601,8 @@ export function Home() {
               variants={scaleIn}
               className="relative overflow-hidden rounded-3xl p-12 lg:p-16 text-center"
               style={{
-                background: 'linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)',
-                boxShadow: '0 20px 60px rgba(74, 144, 226, 0.3)',
+                background: 'linear-gradient(135deg, #8B5CF6 0%, #0EA5E9 100%)',
+                boxShadow: '0 20px 60px rgba(139, 92, 246, 0.3)',
               }}
             >
               {/* Background Pattern */}
@@ -657,7 +647,7 @@ export function Home() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-card text-[#4A90E2] hover:bg-card/90 gap-2 shadow-lg"
+                    className="bg-card text-[#8B5CF6] hover:bg-card/90 gap-2 shadow-lg"
                   >
                     <Link to="/contact">
                       <Mail className="w-5 h-5" />
@@ -670,7 +660,7 @@ export function Home() {
                     variant="outline"
                     className="border-2 border-border text-white hover:bg-card/10 gap-2"
                   >
-                    <a href="/images/projects/Asim-Yaqoob-Resume.pdf" download="Asim-Yaqoob-Resume.pdf">
+                    <a href="/images/projects/asimyaqoobcv.pdf" download="asimyaqoobcv.pdf">
                       <Download className="w-5 h-5" />
                       Download CV
                     </a>

@@ -30,7 +30,7 @@ export function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#8B5CF6] to-[#0EA5E9] rounded-lg flex items-center justify-center text-white font-bold text-xl">
                 AY
               </div>
               <div>
@@ -54,7 +54,7 @@ export function Footer() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-sm text-muted-foreground hover:text-[#4A90E2] transition-colors w-fit"
+                  className="text-sm text-muted-foreground hover:text-[#8B5CF6] transition-colors w-fit"
                 >
                   {link.label}
                 </Link>

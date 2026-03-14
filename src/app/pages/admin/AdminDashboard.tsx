@@ -323,7 +323,7 @@ function ProjectEditor({
           </Button>
           <Button
             onClick={onSave} disabled={isSaving}
-            className="rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 gap-2"
+            className="rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] hover:from-blue-600 hover:to-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 gap-2"
           >
             {isSaving
               ? <><motion.div animate={{ rotate: 360 }} transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }} className="w-4 h-4 border-2 border-border border-t-transparent rounded-full" /> Saving…</>
@@ -873,7 +873,7 @@ export function AdminDashboard() {
       >
         <div className="p-5 border-b border-border">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+            <div className="w-9 h-9 bg-gradient-to-br from-[#8B5CF6] to-[#1E293B] rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
               <LayoutDashboard className="w-5 h-5" />
             </div>
             <div>
@@ -885,7 +885,7 @@ export function AdminDashboard() {
         <nav className="p-3 space-y-1 flex-1">
           {navItems.map(({ id, icon: Icon, label }) => (
             <button key={id} onClick={() => { setActiveTab(id); setSidebarOpen(false); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-sm font-medium ${activeTab === id ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md shadow-blue-500/25' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground'}`}>
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-sm font-medium ${activeTab === id ? 'bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] text-white shadow-md shadow-blue-500/25' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground'}`}>
               <Icon className="w-4 h-4" />
               {label}
               {id === 'projects' && projects.length > 0 && (
@@ -925,7 +925,7 @@ export function AdminDashboard() {
             </div>
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2.5 px-3 py-2 bg-muted/50 rounded-xl border border-border">
-                <div className="w-7 h-7 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white">
+                <div className="w-7 h-7 bg-gradient-to-br from-[#8B5CF6] to-[#1E293B] rounded-full flex items-center justify-center text-white">
                   <User className="w-4 h-4" />
                 </div>
                 <span className="text-sm font-medium text-foreground hidden sm:block">
@@ -948,7 +948,7 @@ export function AdminDashboard() {
                   <p className="text-sm text-muted-foreground">{projects.length} project{projects.length !== 1 ? 's' : ''} in your portfolio</p>
                 </div>
                 <Button onClick={openNew}
-                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white gap-2 rounded-xl shadow-lg shadow-blue-500/20">
+                  className="bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] hover:from-blue-600 hover:to-blue-700 text-white gap-2 rounded-xl shadow-lg shadow-blue-500/20">
                   <Plus className="w-4 h-4" /> Add Project
                 </Button>
               </div>
@@ -966,7 +966,7 @@ export function AdminDashboard() {
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-1">No projects yet</h3>
                   <p className="text-sm text-muted-foreground mb-5">Start by adding your first portfolio project</p>
-                  <Button onClick={openNew} className="bg-gradient-to-r from-blue-500 to-blue-600 text-white gap-2 rounded-xl">
+                  <Button onClick={openNew} className="bg-gradient-to-r from-[#8B5CF6] to-[#1E293B] text-white gap-2 rounded-xl">
                     <Plus className="w-4 h-4" /> Add Project
                   </Button>
                 </div>
